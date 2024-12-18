@@ -1,0 +1,20 @@
+{
+  "welcome": "Добро пожаловать в World Medicine",
+  "login": "Вход в аккаунт",
+  "username": "Логин или номер телефона",
+  "number_reset_pass": "номер телефона",
+  "password": "Пароль",
+  "placeholder_username": "Пишите сюда",
+  "placeholder_password": "123456",
+  "forgot_password": "Забыли пароль?",
+  "back": "Назад",
+  "login_button": "Войти",
+  "login_success": "Рады знакомству!",
+  "login_success_desc": "Добро пожаловать в World Medicine",
+  "login_success_button": "Начать работу",
+  "reset_account": "Восстановление аккаунта",
+  "quick_access": "Быстрый доступ",
+  "navbar_admin_analiktika": "Аналитика",
+  "navbar_admin_upr_sis": "Управление системой",
+  "navbar_admin_upr_bd": "Управление БД"
+}
