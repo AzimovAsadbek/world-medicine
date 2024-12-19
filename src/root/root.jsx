@@ -7,6 +7,7 @@ import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import AddMeneger from "../components/AddMeneger";
+import Profile from "../components/Profile";
 
 const Root = () => {
   const nav = useNavigate();
@@ -23,7 +24,8 @@ const Root = () => {
   }, []);
 
   // return <Router />;
-  return <AddMeneger />;
+  // return <AddMeneger />;
+  return <Profile />;
 };
 
 export default Root;
