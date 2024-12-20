@@ -10,6 +10,7 @@ import AddMeneger from "../components/AddMeneger";
 import Profile from "../components/Profile";
 import Analiktika from "../pages/analiktika/analiktika";
 import Reports from "../components/Reports";
+import ChildRoot from "../components/Asadbek/root";
 
 const Root = () => {
   const nav = useNavigate();
@@ -28,7 +29,8 @@ const Root = () => {
   // return <Router />;
   // return <AddMeneger />;
   // return <Profile />;
-  return <Reports />;
+  // return <Reports />;
+  return <ChildRoot />;
 };
 
 export default Root;
