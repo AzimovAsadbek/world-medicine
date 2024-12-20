@@ -8,6 +8,8 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import AddMeneger from "../components/AddMeneger";
 import Profile from "../components/Profile";
+import Analiktika from "../pages/analiktika/analiktika";
+import Reports from "../components/Reports";
 
 const Root = () => {
   const nav = useNavigate();
@@ -25,7 +27,8 @@ const Root = () => {
 
   // return <Router />;
   // return <AddMeneger />;
-  return <Profile />;
+  // return <Profile />;
+  return <Reports />;
 };
 
 export default Root;

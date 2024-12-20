@@ -12,7 +12,7 @@ const PieContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  padding: 20px;
+  /* padding: 20px; */
   background-color: white;
 
   ${media.mobileL} {
@@ -28,7 +28,7 @@ const Container = styled.div`
   border-radius: 12px;
   text-align: center;
   font-family: Arial, sans-serif;
-  padding: 10px;
+  padding: 20px;
 
   width: 100%;
   height: 100%;

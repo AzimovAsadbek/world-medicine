@@ -9,43 +9,51 @@ import {
   PieContainer,
   PieDiagramCon,
 } from "./style";
+import { TitleText } from "../SalesChart/SalesChar";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const data = {
-  labels: ["Ташкент", "Андижан", "Самарканд"],
-  datasets: [
-    {
-      data: [500, 400, 387],
-      backgroundColor: ["#001EB9", "#FF5B99", "#C4D9FF"],
-      hoverBackgroundColor: ["#001EB9", "#FF5B99", "#C4D9FF"],
-      borderWidth: 0,
-    },
-  ],
-};
+const PieDiagram2 = ({
+  item = [],
+  count = [500, 400, 387],
+  countType = "",
+  title = "",
+  bgColor = [],
+}) => {
+  const data = {
+    labels: item,
+    datasets: [
+      {
+        data: count,
+        backgroundColor: bgColor,
+        hoverBackgroundColor: bgColor,
+        borderWidth: 0,
+      },
+    ],
+  };
 
-const options = {
-  cutout: "70%",
-  plugins: {
-    legend: {
-      display: false,
-    },
-    tooltip: {
-      callbacks: {
-        label: function (tooltipItem) {
-          return `${tooltipItem.label}: ${tooltipItem.raw} шт.`;
+  const options = {
+    cutout: "70%",
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        callbacks: {
+          label: function (tooltipItem) {
+            return `${tooltipItem.label}: ${tooltipItem.raw} шт.`;
+          },
         },
       },
     },
-  },
-};
-
-const PieDiagram = () => {
+  };
   const total = data.datasets[0].data.reduce((acc, value) => acc + value, 0);
 
   return (
     <PieContainer>
       <Container>
+        <TitleText>{title}</TitleText>
+
         <div className="main">
           <div className="pie-main">
             <PieDiagramCon data={data} options={options} />
@@ -58,7 +66,8 @@ const PieDiagram = () => {
             {data.labels.map((label, index) => (
               <LegendItem key={label}>
                 <ColorBox color={data.datasets[0].backgroundColor[index]} />
-                {label} {data.datasets[0].data[index]} шт.
+                {label} {countType && data.datasets[0].data[index]} {countType}
+                {countType && "."}
               </LegendItem>
             ))}
           </LegendContainer>
@@ -68,4 +77,4 @@ const PieDiagram = () => {
   );
 };
 
-export default PieDiagram;
+export default PieDiagram2;
