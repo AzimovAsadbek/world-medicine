@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import EyeIcon from "../../../assets/svg/EyeIcon";
 import { useState } from "react";
+import ArrowLeft from "../../../../../assets/svg/ArrowLeft";
+
+import RightArrow from "../../../../../assets/svg/RightArrow";
 
 const Wrapper = styled.div`
   height: 450px;
@@ -83,6 +86,7 @@ const Button = styled.button`
   border: none;
   border-radius: 3px;
   background-color: #f7f8fc;
+  color: black;
 
   @media (max-width: 760px) {
     width: 100px;
@@ -145,7 +149,7 @@ const GenericTable = ({ thead = [], data = [] }) => {
         </thead>
         <tbody>
           {currentData.map((row, index) => (
-            <tr key={row.id}>
+            <tr key={index}>
               <td>№{index + 1}</td>
               {Object.keys(row).map((v, i) => {
                 return (
@@ -165,7 +169,7 @@ const GenericTable = ({ thead = [], data = [] }) => {
       </TableStyled>
       <Footer>
         <Button onClick={handlePrev} disabled={currentPage === 1}>
-          {"<"} Prev
+          <ArrowLeft></ArrowLeft>
         </Button>
 
         {/* Sahifa raqami */}
@@ -175,7 +179,7 @@ const GenericTable = ({ thead = [], data = [] }) => {
 
         {/* Keyingi tugma */}
         <Button onClick={handleNext} disabled={currentPage === totalPages}>
-          Next {">"}
+          <RightArrow />
         </Button>
       </Footer>
     </Wrapper>
