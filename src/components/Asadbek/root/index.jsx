@@ -1,6 +1,7 @@
 import AdminNavbar from "../../navbar/admin/navbar";
 import CreatingContract from "../components/CreatingContract";
 import Recipes from "../components/Recipes";
+import SelMed from "../components/SelMed";
 import Settings from "../components/Settings";
 
 const ChildRoot = () => {
@@ -9,7 +10,8 @@ const ChildRoot = () => {
       {/* <AdminNavbar />
       <Recipes /> */}
       {/* <Settings /> */}
-      <CreatingContract />
+      {/* <CreatingContract /> */}
+      <SelMed />
     </div>
   );
 };
