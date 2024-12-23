@@ -1,4 +1,5 @@
 import AdminNavbar from "../../navbar/admin/navbar";
+import CreatingContract from "../components/CreatingContract";
 import Recipes from "../components/Recipes";
 import Settings from "../components/Settings";
 
@@ -7,7 +8,8 @@ const ChildRoot = () => {
     <div>
       {/* <AdminNavbar />
       <Recipes /> */}
-      <Settings />
+      {/* <Settings /> */}
+      <CreatingContract />
     </div>
   );
 };
