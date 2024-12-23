@@ -179,7 +179,7 @@ const Recipes = () => {
             <PrimarySelect
               def={information.inputData.preparation}
               options={[]}
-              onValueChange={(value) => handleSelectChange(["place", value])}
+              onValueChange={(value) => handleChange(["place", value])}
             />
             <Input2
               type={"text"}
